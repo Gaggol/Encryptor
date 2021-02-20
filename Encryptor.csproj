@@ -129,4 +129,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>$(SolutionDir)build.bat $(ConfigurationName) $(TargetFileName) $(SolutionName)</PostBuildEvent>
+  </PropertyGroup>
 </Project>

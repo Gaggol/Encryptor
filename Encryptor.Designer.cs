@@ -29,6 +29,7 @@
             this.SubmitButton = new System.Windows.Forms.Button();
             this.TextBox = new System.Windows.Forms.TextBox();
             this.ResetButton = new System.Windows.Forms.Button();
+            this.MuteErrors = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // SubmitButton
@@ -62,12 +63,24 @@
             this.ResetButton.UseVisualStyleBackColor = true;
             this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
             // 
+            // MuteErrors
+            // 
+            this.MuteErrors.AutoSize = true;
+            this.MuteErrors.Location = new System.Drawing.Point(155, 2);
+            this.MuteErrors.Name = "MuteErrors";
+            this.MuteErrors.Size = new System.Drawing.Size(80, 17);
+            this.MuteErrors.TabIndex = 3;
+            this.MuteErrors.Text = "Mute Errors";
+            this.MuteErrors.UseVisualStyleBackColor = true;
+            this.MuteErrors.CheckedChanged += new System.EventHandler(this.MuteErrors_CheckedChanged);
+            // 
             // Encryptor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(384, 161);
+            this.Controls.Add(this.MuteErrors);
             this.Controls.Add(this.ResetButton);
             this.Controls.Add(this.TextBox);
             this.Controls.Add(this.SubmitButton);
@@ -88,6 +101,7 @@
         private System.Windows.Forms.Button SubmitButton;
         private System.Windows.Forms.TextBox TextBox;
         private System.Windows.Forms.Button ResetButton;
+        private System.Windows.Forms.CheckBox MuteErrors;
     }
 }
 

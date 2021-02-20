@@ -13,7 +13,7 @@ namespace Encryptor
     public partial class Encryptor : Form
     {
         bool firstClick = false;
-
+        bool muteErrors = false;
         string initialString = "";
 
         public Encryptor() {
@@ -22,8 +22,9 @@ namespace Encryptor
 
         private void SubmitButton_Click(object sender, EventArgs e) {
             string txt = TextBox.Text;
-            TextBox.Text = Program.Encrypt(txt);
+            TextBox.Text = Program.Encrypt(txt, muteErrors);
             TextBox.ReadOnly = true;
+            firstClick = true;
         }
 
         private void ResetButton_Click(object sender, EventArgs e) {
@@ -39,6 +40,14 @@ namespace Encryptor
             if(!firstClick) {
                 TextBox.Text = "";
                 firstClick = true;
+            }
+        }
+
+        private void MuteErrors_CheckedChanged(object sender, EventArgs e) {
+            if(MuteErrors.CheckState == CheckState.Checked) {
+                muteErrors = true;
+            } else {
+                muteErrors = false;
             }
         }
     }
