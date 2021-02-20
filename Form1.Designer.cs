@@ -27,6 +27,7 @@
         private void InitializeComponent() {
             this.SubmitButton = new System.Windows.Forms.Button();
             this.TextBox = new System.Windows.Forms.TextBox();
+            this.ResetButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // SubmitButton
@@ -44,15 +45,28 @@
             this.TextBox.Location = new System.Drawing.Point(1, 20);
             this.TextBox.Multiline = true;
             this.TextBox.Name = "TextBox";
+            this.TextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.TextBox.Size = new System.Drawing.Size(382, 140);
             this.TextBox.TabIndex = 1;
-            this.TextBox.Text = "Big Booty Bitches";
+            this.TextBox.Text = "Input Text to Encrypt";
+            this.TextBox.Click += new System.EventHandler(this.TextBox_Click);
+            // 
+            // button1
+            // 
+            this.ResetButton.Location = new System.Drawing.Point(334, 0);
+            this.ResetButton.Name = "ResetButton";
+            this.ResetButton.Size = new System.Drawing.Size(50, 20);
+            this.ResetButton.TabIndex = 2;
+            this.ResetButton.Text = "Reset";
+            this.ResetButton.UseVisualStyleBackColor = true;
+            this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 161);
+            this.Controls.Add(this.ResetButton);
             this.Controls.Add(this.TextBox);
             this.Controls.Add(this.SubmitButton);
             this.MaximizeBox = false;
@@ -69,6 +83,7 @@
 
         private System.Windows.Forms.Button SubmitButton;
         private System.Windows.Forms.TextBox TextBox;
+        private System.Windows.Forms.Button ResetButton;
     }
 }
 
