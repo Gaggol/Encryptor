@@ -49,7 +49,6 @@ namespace Encryptor
                 byte[] x;
                 try {
                     x = Encoding.UTF8.GetBytes(Environment.UserDomainName + Environment.UserName);
-                    throw new PlatformNotSupportedException();
                 }
                 catch(Exception ex) {
                     if(ex is PlatformNotSupportedException || ex is InvalidOperationException) {
@@ -92,7 +91,10 @@ namespace Encryptor
             if(muteErrors) {
                 return output;
             } else {
-                return output + Environment.NewLine + Environment.NewLine + "===== Errors =====" + Environment.NewLine + errorList;
+                if(string.IsNullOrEmpty(errorList)) {
+                    return output + Environment.NewLine + Environment.NewLine + "===== Errors =====" + Environment.NewLine + errorList;
+                }
+                return output;
             }
         }
 
