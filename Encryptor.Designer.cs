@@ -1,6 +1,6 @@
 ﻿namespace Encryptor
 {
-    partial class Form1
+    partial class Encryptor
     {
         /// <summary>
         /// Required designer variable.
@@ -25,6 +25,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Encryptor));
             this.SubmitButton = new System.Windows.Forms.Button();
             this.TextBox = new System.Windows.Forms.TextBox();
             this.ResetButton = new System.Windows.Forms.Button();
@@ -51,7 +52,7 @@
             this.TextBox.Text = "Input Text to Encrypt";
             this.TextBox.Click += new System.EventHandler(this.TextBox_Click);
             // 
-            // button1
+            // ResetButton
             // 
             this.ResetButton.Location = new System.Drawing.Point(334, 0);
             this.ResetButton.Name = "ResetButton";
@@ -61,18 +62,21 @@
             this.ResetButton.UseVisualStyleBackColor = true;
             this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
             // 
-            // Form1
+            // Encryptor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(384, 161);
             this.Controls.Add(this.ResetButton);
             this.Controls.Add(this.TextBox);
             this.Controls.Add(this.SubmitButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Encryptor";
+            this.Text = "Encryptor";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

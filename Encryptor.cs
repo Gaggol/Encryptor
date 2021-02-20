@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace Encryptor
 {
-    public partial class Form1 : Form
+    public partial class Encryptor : Form
     {
         bool firstClick = false;
 
         string initialString = "";
 
-        public Form1() {
+        public Encryptor() {
             InitializeComponent();
         }
 
